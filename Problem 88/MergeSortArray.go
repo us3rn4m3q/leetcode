@@ -4,7 +4,7 @@ import "fmt"
 
 func main() {
 	nums1 := []int{0, 7, 2, 3, 4, 8, 6, 3, 8, 9}
-	fmt.Println(split(nums1))
+	fmt.Println(mergesort(nums1))
 }
 
 func mergesort(Arr []int) []int {
