@@ -7,16 +7,16 @@ func main() {
 	fmt.Println(split(nums1))
 }
 
-func split(Arr []int) []int {
+func mergesort(Arr []int) []int {
 	if len(Arr) == 1 {
 		return Arr
 	}
-	ArrOne := split(Arr[:len(Arr)/2])
-	ArrTwo := split(Arr[len(Arr)/2:])
-	return mergesort(ArrOne, ArrTwo)
+	ArrOne := mergesort(Arr[:len(Arr)/2])
+	ArrTwo := mergesort(Arr[len(Arr)/2:])
+	return sort(ArrOne, ArrTwo)
 }
 
-func mergesort(nums1 []int, nums2 []int) []int {
+func sort(nums1 []int, nums2 []int) []int {
 	Arr := []int{}
 	i, j := 0, 0
 	for i < len(nums1) && j < len(nums2) {
